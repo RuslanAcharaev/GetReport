@@ -4,7 +4,6 @@ from error_checkers import check_files, check_args
 
 
 def process_args(args):
-    print(args)
     if check_args(args) and check_files(args.files):
         raw_data = parse_csv_files(args.files)
         normalized_data = normalize_data(raw_data)
